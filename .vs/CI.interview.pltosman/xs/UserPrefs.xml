@@ -1,0 +1,80 @@
+﻿<Properties StartupConfiguration="{B3E0C05F-AC18-4DF0-9C48-F383B6910E26}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CI.interview.pltosman.api/Controllers/HomeController.cs">
+    <Files>
+      <File FileName="CI.interview.pltosman.Business/Abstract/IExcelDataService.cs" Line="14" Column="2" IsPinned="True" />
+      <File FileName="CI.interview.pltosman.Business/Concrete/ExcelService.cs" Line="203" Column="47" />
+      <File FileName="CI.interview.pltosman.api/Controllers/HomeController.cs" Line="94" Column="1" />
+      <File FileName="CI.interview.pltosman.Business/Concrete/ExcelDataManager.cs" Line="48" Column="1" />
+      <File FileName="CI.interview.pltosman.Entities/Concrete/Rate.cs" Line="8" Column="37" />
+      <File FileName="CI.interview.pltosman.Entities/Concrete/ExcelData.cs" Line="9" Column="1" />
+      <File FileName="CI.interview.pltosman.Core/DataAccesss/EntityFramework/EfEntityRepositoryBase.cs" Line="55" Column="1" />
+      <File FileName="CI.interview.pltosman.DataAccess/Concrete/EntityFramework/Contexts/InterviewContext.cs" Line="21" Column="43" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CI.interview.pltosman" expanded="True">
+            <Node name="CI.interview.pltosman.api" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="HomeController.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="CI.interview.pltosman.Business" expanded="True">
+              <Node name="Abstract" expanded="True" />
+              <Node name="Concrete" expanded="True" />
+              <Node name="DependecyResolvers" expanded="True">
+                <Node name="Autofac" expanded="True" />
+              </Node>
+              <Node name="Mappers" expanded="True" />
+            </Node>
+            <Node name="CI.interview.pltosman.Core" expanded="True">
+              <Node name="DataAccesss" expanded="True">
+                <Node name="EntityFramework" expanded="True" />
+              </Node>
+              <Node name="Entities" expanded="True" />
+              <Node name="Utilities" expanded="True">
+                <Node name="Results" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="CI.interview.pltosman.DataAccess" expanded="True">
+              <Node name="Concrete" expanded="True">
+                <Node name="EntityFramework" expanded="True">
+                  <Node name="Contexts" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="CI.interview.pltosman.Entities" expanded="True">
+              <Node name="Concrete" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>result.Data</Value>
+          <Value>result[12]</Value>
+          <Value>csvTable.Rows[1]</Value>
+          <Value>data.FirstOrDefault()</Value>
+          <Value>model[1]</Value>
+          <Value>query.ToListAsync()</Value>
+          <Value> _excelDataService.GetByDate(new DateTime(2019, 9, 9));</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.CI.interview.pltosman.api PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api/Controllers/HomeController.cs" relfile="CI.interview.pltosman.api/Controllers/HomeController.cs" line="64" column="1" />
+      <Breakpoint file="/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Business/Concrete/FixerRateManager.cs" relfile="CI.interview.pltosman.Business/Concrete/FixerRateManager.cs" line="31" column="1" />
+      <Breakpoint file="/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Business/Concrete/FixerRateManager.cs" relfile="CI.interview.pltosman.Business/Concrete/FixerRateManager.cs" line="35" column="1" />
+      <Breakpoint file="/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Business/Concrete/ExcelService.cs" relfile="CI.interview.pltosman.Business/Concrete/ExcelService.cs" line="146" column="1" />
+      <Breakpoint file="/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Core/DataAccesss/EntityFramework/EfEntityRepositoryBase.cs" relfile="CI.interview.pltosman.Core/DataAccesss/EntityFramework/EfEntityRepositoryBase.cs" line="45" column="1" />
+      <Breakpoint file="/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Core/DataAccesss/EntityFramework/EfEntityRepositoryBase.cs" relfile="CI.interview.pltosman.Core/DataAccesss/EntityFramework/EfEntityRepositoryBase.cs" line="53" column="1" />
+      <Breakpoint file="/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Business/Concrete/ExcelDataManager.cs" relfile="CI.interview.pltosman.Business/Concrete/ExcelDataManager.cs" line="35" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

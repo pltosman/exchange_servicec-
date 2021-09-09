@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Abstract\" />
+    <None Remove="Concrete\" />
+    <None Remove="DependecyResolvers\" />
+    <None Remove="DependecyResolvers\Autofac\" />
+    <None Remove="Mappers\" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="AutoMapper" />
+    <None Remove="ExcelMapper" />
+    <None Remove="ExcelDataReader" />
+    <None Remove="EPPlus" />
+    <None Remove="Extension\" />
+    <None Remove="CsvHelper" />
+    <None Remove="LumenWorks.Framework.IO" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Abstract\" />
+    <Folder Include="Concrete\" />
+    <Folder Include="DependecyResolvers\" />
+    <Folder Include="DependecyResolvers\Autofac\" />
+    <Folder Include="Mappers\" />
+    <Folder Include="Extension\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CI.interview.pltosman.Core\CI.interview.pltosman.Core.csproj" />
+    <ProjectReference Include="..\CI.interview.pltosman.DataAccess\CI.interview.pltosman.DataAccess.csproj" />
+  </ItemGroup>
+   <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.2.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="ExcelMapper" Version="5.2.314" />
+    <PackageReference Include="ExcelDataReader" Version="3.6.0" />
+    <PackageReference Include="EPPlus" Version="5.7.4" />
+    <PackageReference Include="CsvHelper" Version="27.1.1" />
+    <PackageReference Include="LumenWorks.Framework.IO" Version="3.8.0" />
+  </ItemGroup>
+</Project>

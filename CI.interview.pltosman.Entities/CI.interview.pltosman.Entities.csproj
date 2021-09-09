@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Concrete\" />
+    <None Remove="Dtos\" />
+    <None Remove="ResponseModel\" />
+    <None Remove="ExcelMapper" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Concrete\" />
+    <Folder Include="Dtos\" />
+    <Folder Include="ResponseModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CI.interview.pltosman.Core\CI.interview.pltosman.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ExcelMapper" Version="5.2.314" />
+  </ItemGroup>
+</Project>

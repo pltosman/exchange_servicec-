@@ -1,0 +1,15 @@
+/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Core/bin/Debug/net5.0/CI.interview.pltosman.Core.deps.json
+/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Core/bin/Debug/net5.0/CI.interview.pltosman.Core.runtimeconfig.json
+/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Core/bin/Debug/net5.0/CI.interview.pltosman.Core.runtimeconfig.dev.json
+/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Core/bin/Debug/net5.0/CI.interview.pltosman.Core.dll
+/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Core/bin/Debug/net5.0/ref/CI.interview.pltosman.Core.dll
+/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Core/bin/Debug/net5.0/CI.interview.pltosman.Core.pdb
+/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Core/obj/Debug/net5.0/CI.interview.pltosman.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Core/obj/Debug/net5.0/CI.interview.pltosman.Core.AssemblyInfoInputs.cache
+/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Core/obj/Debug/net5.0/CI.interview.pltosman.Core.AssemblyInfo.cs
+/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Core/obj/Debug/net5.0/CI.interview.pltosman.Core.csproj.CoreCompileInputs.cache
+/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Core/obj/Debug/net5.0/CI.interview.pltosman.Core.dll
+/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Core/obj/Debug/net5.0/ref/CI.interview.pltosman.Core.dll
+/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Core/obj/Debug/net5.0/CI.interview.pltosman.Core.pdb
+/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Core/obj/Debug/net5.0/CI.interview.pltosman.Core.genruntimeconfig.cache
+/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Core/obj/Debug/net5.0/CI.interview.pltosman.Core.csproj.AssemblyReference.cache

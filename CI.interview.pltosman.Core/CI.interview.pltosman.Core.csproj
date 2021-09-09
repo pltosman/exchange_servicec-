@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DataAccesss\" />
+    <None Remove="Entities\" />
+    <None Remove="Extentions\" />
+    <None Remove="Utilities\" />
+    <None Remove="Utilities\Messages\" />
+    <None Remove="Utilities\Results\" />
+    <None Remove="Utilities\Security\" />
+    <None Remove="Entities\Concrete\" />
+    <None Remove="DataAccesss\EntityFramework\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataAccesss\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Extentions\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="Utilities\Messages\" />
+    <Folder Include="Utilities\Results\" />
+    <Folder Include="Utilities\Security\" />
+    <Folder Include="Entities\Concrete\" />
+    <Folder Include="DataAccesss\EntityFramework\" />
+  </ItemGroup>
+   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.8" />
+    <PackageReference Include="RestSharp" Version="106.12.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,184 @@
+2021-09-08 00:32:24.241 +01:00 [INF] Host starting.
+2021-09-08 00:32:47.802 +01:00 [ERR] An error occured during migration
+Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'CI.interview.pltosman.DataAccess.Concrete.EntityFramework.Contexts.InterviewContext' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetRequiredService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at CI.interview.pltosman.api.Program.Main(String[] args) in /Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api/Program.cs:line 49
+2021-09-08 00:32:47.860 +01:00 [FTL] Application startup exception
+System.ArgumentException: 'AddDbContext' was called with configuration, but the context type 'InterviewContext' only declares a parameterless constructor. This means that the configuration passed to 'AddDbContext' will never be used. If configuration is passed to 'AddDbContext', then 'InterviewContext' should declare a constructor that accepts a DbContextOptions<InterviewContext> and must pass it to the base constructor for DbContext.
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.CheckContextConstructors[TContext]()
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.AddDbContext[TContextService,TContextImplementation](IServiceCollection serviceCollection, Action`2 optionsAction, ServiceLifetime contextLifetime, ServiceLifetime optionsLifetime)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.AddDbContext[TContextService,TContextImplementation](IServiceCollection serviceCollection, Action`1 optionsAction, ServiceLifetime contextLifetime, ServiceLifetime optionsLifetime)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.AddDbContext[TContext](IServiceCollection serviceCollection, Action`1 optionsAction, ServiceLifetime contextLifetime, ServiceLifetime optionsLifetime)
+   at CI.interview.pltosman.api.Startup.ConfigureServices(IServiceCollection services) in /Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api/Startup.cs:line 32
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.InvokeCore(Object instance, IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.<>c__DisplayClass9_0.<Invoke>g__Startup|0(IServiceCollection serviceCollection)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.Invoke(Object instance, IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.<>c__DisplayClass8_0.<Build>b__0(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.UseStartup(Type startupType, HostBuilderContext context, IServiceCollection services, Object instance)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass15_0.<UseStartup>b__1(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2021-09-08 00:32:47.953 +01:00 [INF] Now listening on: http://localhost:5003
+2021-09-08 00:32:47.954 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-09-08 00:32:47.954 +01:00 [INF] Hosting environment: Development
+2021-09-08 00:32:47.954 +01:00 [INF] Content root path: /Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api
+2021-09-08 12:53:12.481 +01:00 [INF] Host starting.
+2021-09-08 12:58:13.956 +01:00 [INF] Host starting.
+2021-09-08 12:58:30.827 +01:00 [ERR] An error occured during migration
+Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'CI.interview.pltosman.DataAccess.Concrete.EntityFramework.Contexts.InterviewContext' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetRequiredService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at CI.interview.pltosman.api.Program.Main(String[] args) in /Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api/Program.cs:line 49
+2021-09-08 12:58:30.895 +01:00 [FTL] Application startup exception
+System.ArgumentException: 'AddDbContext' was called with configuration, but the context type 'InterviewContext' only declares a parameterless constructor. This means that the configuration passed to 'AddDbContext' will never be used. If configuration is passed to 'AddDbContext', then 'InterviewContext' should declare a constructor that accepts a DbContextOptions<InterviewContext> and must pass it to the base constructor for DbContext.
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.CheckContextConstructors[TContext]()
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.AddDbContext[TContextService,TContextImplementation](IServiceCollection serviceCollection, Action`2 optionsAction, ServiceLifetime contextLifetime, ServiceLifetime optionsLifetime)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.AddDbContext[TContextService,TContextImplementation](IServiceCollection serviceCollection, Action`1 optionsAction, ServiceLifetime contextLifetime, ServiceLifetime optionsLifetime)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.AddDbContext[TContext](IServiceCollection serviceCollection, Action`1 optionsAction, ServiceLifetime contextLifetime, ServiceLifetime optionsLifetime)
+   at CI.interview.pltosman.api.Startup.ConfigureServices(IServiceCollection services) in /Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api/Startup.cs:line 33
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.InvokeCore(Object instance, IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.<>c__DisplayClass9_0.<Invoke>g__Startup|0(IServiceCollection serviceCollection)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.Invoke(Object instance, IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.ConfigureServicesBuilder.<>c__DisplayClass8_0.<Build>b__0(IServiceCollection services)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.UseStartup(Type startupType, HostBuilderContext context, IServiceCollection services, Object instance)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass15_0.<UseStartup>b__1(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2021-09-08 12:58:30.997 +01:00 [INF] Now listening on: http://localhost:5003
+2021-09-08 12:58:30.998 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-09-08 12:58:30.998 +01:00 [INF] Hosting environment: Development
+2021-09-08 12:58:30.998 +01:00 [INF] Content root path: /Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api
+2021-09-08 13:01:58.369 +01:00 [INF] Host starting.
+2021-09-08 13:01:59.923 +01:00 [ERR] An error occured during migration
+Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'CI.interview.pltosman.DataAccess.Concrete.EntityFramework.Contexts.InterviewContext' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetRequiredService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at CI.interview.pltosman.api.Program.Main(String[] args) in /Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api/Program.cs:line 49
+2021-09-08 13:02:00.339 +01:00 [INF] Now listening on: http://localhost:5003
+2021-09-08 13:02:00.340 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-09-08 13:02:00.340 +01:00 [INF] Hosting environment: Development
+2021-09-08 13:02:00.340 +01:00 [INF] Content root path: /Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api
+2021-09-08 13:02:16.411 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5003/swagger/index.html - -
+2021-09-08 13:02:16.548 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5003/swagger/index.html - - - 200 - text/html;charset=utf-8 140.1816ms
+2021-09-08 13:02:16.670 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5003/swagger/swagger-ui-standalone-preset.js - -
+2021-09-08 13:02:16.670 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5003/swagger/swagger-ui-bundle.js - -
+2021-09-08 13:02:16.674 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5003/swagger/swagger-ui.css - -
+2021-09-08 13:02:16.882 +01:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-09-08 13:02:16.882 +01:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-09-08 13:02:16.882 +01:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-09-08 13:02:16.884 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5003/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 213.7934ms
+2021-09-08 13:02:16.884 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5003/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 213.7845ms
+2021-09-08 13:02:16.884 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5003/swagger/swagger-ui.css - - - 200 142933 text/css 210.1497ms
+2021-09-08 13:02:17.272 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5003/swagger/v1/swagger.json - -
+2021-09-08 13:02:17.297 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/Home" for actions - CI.interview.pltosman.api.Controllers.HomeController.GetRateByDates (CI.interview.pltosman.api),CI.interview.pltosman.api.Controllers.HomeController.GetSourcePathForData (CI.interview.pltosman.api). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-09-08 13:02:17.305 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5003/swagger/v1/swagger.json - - - 500 - text/plain 32.8043ms
+2021-09-08 13:02:17.347 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5003/swagger/favicon-32x32.png - -
+2021-09-08 13:02:17.347 +01:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-09-08 13:02:17.347 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5003/swagger/favicon-32x32.png - - - 200 628 image/png 0.5580ms
+2021-09-08 13:03:33.961 +01:00 [INF] Host starting.
+2021-09-08 13:03:35.101 +01:00 [ERR] An error occured during migration
+Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'CI.interview.pltosman.DataAccess.Concrete.EntityFramework.Contexts.InterviewContext' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetRequiredService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at CI.interview.pltosman.api.Program.Main(String[] args) in /Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api/Program.cs:line 49
+2021-09-08 13:03:35.391 +01:00 [INF] Now listening on: http://localhost:5003
+2021-09-08 13:03:35.392 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-09-08 13:03:35.392 +01:00 [INF] Hosting environment: Development
+2021-09-08 13:03:35.392 +01:00 [INF] Content root path: /Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api
+2021-09-08 13:03:40.896 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5003/swagger/index.html - -
+2021-09-08 13:03:41.024 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5003/swagger/index.html - - - 200 - text/html;charset=utf-8 130.9234ms
+2021-09-08 13:03:41.527 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5003/swagger/v1/swagger.json - -
+2021-09-08 13:03:41.543 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5003/swagger/favicon-32x32.png - -
+2021-09-08 13:03:41.562 +01:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2021-09-08 13:03:41.563 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5003/swagger/favicon-32x32.png - - - 200 628 image/png 19.6426ms
+2021-09-08 13:03:41.636 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5003/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 108.2882ms
+2021-09-08 13:20:12.762 +01:00 [INF] Host starting.
+2021-09-08 13:20:14.298 +01:00 [ERR] An error occured during migration
+Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'CI.interview.pltosman.DataAccess.Concrete.EntityFramework.Contexts.InterviewContext' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetRequiredService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at CI.interview.pltosman.api.Program.Main(String[] args) in /Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api/Program.cs:line 49
+2021-09-08 13:20:14.696 +01:00 [INF] Now listening on: http://localhost:5003
+2021-09-08 13:20:14.698 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-09-08 13:20:14.698 +01:00 [INF] Hosting environment: Development
+2021-09-08 13:20:14.698 +01:00 [INF] Content root path: /Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api
+2021-09-08 13:21:00.511 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/Home application/json 60
+2021-09-08 13:21:00.583 +01:00 [INF] CORS policy execution failed.
+2021-09-08 13:21:00.587 +01:00 [INF] Request origin http://localhost:5003 does not have permission to access the resource.
+2021-09-08 13:21:00.589 +01:00 [INF] Executing endpoint 'CI.interview.pltosman.api.Controllers.HomeController.GetRateByDates (CI.interview.pltosman.api)'
+2021-09-08 13:21:00.638 +01:00 [INF] Route matched with {action = "GetRateByDates", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRateByDates(CI.interview.pltosman.Entities.Dtos.FixerRequestDto) on controller CI.interview.pltosman.api.Controllers.HomeController (CI.interview.pltosman.api).
+2021-09-08 13:21:00.707 +01:00 [INF] Fixer Service controller's method called
+2021-09-08 13:21:17.275 +01:00 [ERR] The entity type 'Rate' requires a primary key to be defined. If you intended to use a keyless entity type, call 'HasNoKey' in 'OnModelCreating'. For more information on keyless entity types, see https://go.microsoft.com/fwlink/?linkid=2141943.
+2021-09-08 13:22:56.903 +01:00 [INF] Host starting.
+2021-09-08 13:25:07.197 +01:00 [ERR] An error occured during migration
+Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'CI.interview.pltosman.DataAccess.Concrete.EntityFramework.Contexts.InterviewContext' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetRequiredService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at CI.interview.pltosman.api.Program.Main(String[] args) in /Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api/Program.cs:line 49
+2021-09-08 13:25:07.528 +01:00 [INF] Now listening on: http://localhost:5003
+2021-09-08 13:25:07.529 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-09-08 13:25:07.529 +01:00 [INF] Hosting environment: Development
+2021-09-08 13:25:07.529 +01:00 [INF] Content root path: /Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api
+2021-09-08 13:26:30.431 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/Home application/json 63
+2021-09-08 13:26:30.507 +01:00 [INF] CORS policy execution failed.
+2021-09-08 13:26:30.509 +01:00 [INF] Request origin http://localhost:5003 does not have permission to access the resource.
+2021-09-08 13:26:30.513 +01:00 [INF] Executing endpoint 'CI.interview.pltosman.api.Controllers.HomeController.GetRateByDates (CI.interview.pltosman.api)'
+2021-09-08 13:26:30.554 +01:00 [INF] Route matched with {action = "GetRateByDates", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRateByDates(CI.interview.pltosman.Entities.Dtos.FixerRequestDto) on controller CI.interview.pltosman.api.Controllers.HomeController (CI.interview.pltosman.api).
+2021-09-08 13:26:30.618 +01:00 [INF] Fixer Service controller's method called
+2021-09-08 13:28:08.764 +01:00 [INF] Host starting.
+2021-09-08 13:28:13.328 +01:00 [ERR] An error occured during migration
+Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'CI.interview.pltosman.DataAccess.Concrete.EntityFramework.Contexts.InterviewContext' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetRequiredService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at CI.interview.pltosman.api.Program.Main(String[] args) in /Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api/Program.cs:line 49
+2021-09-08 13:28:13.674 +01:00 [INF] Now listening on: http://localhost:5003
+2021-09-08 13:28:13.675 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-09-08 13:28:13.675 +01:00 [INF] Hosting environment: Development
+2021-09-08 13:28:13.675 +01:00 [INF] Content root path: /Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api
+2021-09-08 13:28:18.559 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5003/api/Home application/json 63
+2021-09-08 13:28:18.611 +01:00 [INF] CORS policy execution failed.
+2021-09-08 13:28:18.613 +01:00 [INF] Request origin http://localhost:5003 does not have permission to access the resource.
+2021-09-08 13:28:18.615 +01:00 [INF] Executing endpoint 'CI.interview.pltosman.api.Controllers.HomeController.GetRateByDates (CI.interview.pltosman.api)'
+2021-09-08 13:28:18.644 +01:00 [INF] Route matched with {action = "GetRateByDates", controller = "Home"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetRateByDates(CI.interview.pltosman.Entities.Dtos.FixerRequestDto) on controller CI.interview.pltosman.api.Controllers.HomeController (CI.interview.pltosman.api).
+2021-09-08 13:28:18.692 +01:00 [INF] Fixer Service controller's method called
