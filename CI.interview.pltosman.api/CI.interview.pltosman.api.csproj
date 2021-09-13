@@ -39,8 +39,10 @@
    <None Remove="Microsoft.EntityFrameworkCore.Design" />
    <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
    <None Remove="data\" />
+   <None Remove="Logs\" />
  </ItemGroup>
  <ItemGroup>
    <Folder Include="data\" />
+   <Folder Include="Logs\" />
  </ItemGroup>
 </Project>

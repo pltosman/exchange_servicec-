@@ -9,6 +9,7 @@ using CI.interview.pltosman.Core.Entities.Concrete;
 using CI.interview.pltosman.Core.Extentions;
 using CI.interview.pltosman.Core.Utilities.Messages;
 using CI.interview.pltosman.Core.Utilities.Results;
+using CI.interview.pltosman.Entities.Concrete;
 using CI.interview.pltosman.Entities.Dtos;
 using CI.interview.pltosman.Entities.ResponseModel;
 using Microsoft.AspNetCore.Mvc;
@@ -57,11 +58,11 @@ namespace CI.interview.pltosman.api.Controllers
                 return BadRequest(ModelState.GetErrorMessage().ToString());
             }
 
-            var result = await _fixerDetailService.GetFixerDetail(request.SDate, request.EDate,request.Currency);
+            var result = await _fixerDetailService.GetFixerDetail(request.SDate, request.EDate, request.RateTypes);
 
             if (result.Success)
             {
-             //   _fixerRateService.SaveFixerResult(result.Data);
+                _fixerRateService.SaveFixerResult(result.Data);
                 return Ok(result.Data);
             }
 
@@ -74,7 +75,7 @@ namespace CI.interview.pltosman.api.Controllers
         }
 
 
-        [HttpPost("readExcelData")]
+        [HttpPost("task2")]
         [Produces("application/json")]
         [ProducesResponseType(typeof(IDataResult<List<DataExcelModelDto>>), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
@@ -90,16 +91,38 @@ namespace CI.interview.pltosman.api.Controllers
 
             }
 
-          var response=  _excelDataService.GetByDate(new DateTime(2019, 10, 1)).Result;
+            var response = _excelDataService.GetByDate(new DateTime(2019, 10, 1)).Result;
 
 
-          var rDto=   _mapper.Map<List<DataExcelModelDto>>(response);
+            var rDto = _mapper.Map<List<DataExcelModelDto>>(response);
 
-            return Ok(new DataResult<List<DataExcelModelDto>>(rDto,true));
-           // return NotFound(new Result(false, AspectMessages.NotFoundResult));
+            return Ok(new DataResult<List<DataExcelModelDto>>(rDto, true));
+            // return NotFound(new Result(false, AspectMessages.NotFoundResult));
 
         }
 
 
+        [HttpPost("mergeDataWithRates")]
+        [Produces("application/json")]
+        [ProducesResponseType(typeof(IDataResult<List<DataExcelModelDto>>), (int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+
+        public IActionResult MergeDataWithRates()
+        {
+            List<ExcelData> excelData = _excelDataService.GetList();
+
+            var rates =  _fixerRateService.GetList();
+
+
+            _mergeService.Merge(excelData, rates);
+
+         
+
+            return Ok(new DataResult<List<DataExcelModelDto>>(null, true));
+            // return NotFound(new Result(false, AspectMessages.NotFoundResult));
+
+
+        }
     }
 }

@@ -19,13 +19,14 @@ namespace CI.interview.pltosman.DataAccess.Concrete.EntityFramework.Contexts
             modelBuilder.Entity<FixerRate>(x => x.HasKey(ua => new { ua.Id }));
             modelBuilder.Entity<Rate>().HasOne(u => u.FixerRate).WithMany(a => a.Rates).HasForeignKey(u => u.FixerRateId);
             modelBuilder.Entity<ExcelData>(x => x.HasKey(ua => new { ua.Id }));
+            modelBuilder.Entity<Merge>(x => x.HasKey(ua => new { ua.Id }));
 
         }
 
 
         public DbSet<Rate> Rates { get; set; }
         public DbSet<FixerRate> FixerRates { get; set; }
-
         public DbSet<ExcelData> ExcelData { get; set; }
+        public DbSet<Merge> Merges { get; set; }
     }
 }

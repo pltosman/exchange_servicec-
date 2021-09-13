@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
 using CI.interview.pltosman.Business.Abstract;
 using CI.interview.pltosman.Core.Entities.Concrete;
@@ -36,6 +38,12 @@ namespace CI.interview.pltosman.Business.Concrete
             {
                 _logger.LogError(ex.Message);
             }
+        }
+
+
+        public List<FixerRate> GetList()
+        {
+            return _fixerRateDal.GetList().ToList();
         }
     }
 }

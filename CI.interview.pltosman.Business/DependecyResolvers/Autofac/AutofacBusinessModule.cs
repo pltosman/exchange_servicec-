@@ -17,6 +17,9 @@ namespace CI.interview.pltosman.Business.DependecyResolvers.Autofac
             builder.RegisterType<ExcelDataManager>().As<IExcelDataService>();
             builder.RegisterType<EfExcelDataDal>().As<IExcelDataDal>();
 
+            builder.RegisterType<MergeManager>().As<IMergeService>();
+            builder.RegisterType<EfMergeDal>().As<IMergeDal>();
+
             builder.RegisterType<FixerDetailService>().As<IFixerDetailService>();
        
 

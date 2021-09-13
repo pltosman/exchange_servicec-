@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using CI.interview.pltosman.Business.Abstract;
@@ -45,6 +46,11 @@ namespace CI.interview.pltosman.Business.Concrete
         public async Task<List<ExcelData>> GetByDate(DateTime date)
         {
             return ((List<ExcelData>)await _excelData.GetAllAsync(x => x.Date.Equals(date))).GetRange(1,4);
+        }
+
+        public List<ExcelData> GetList()
+        {
+           return _excelData.GetList().ToList();
         }
     }
 }
