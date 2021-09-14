@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using CI.interview.pltosman.Business.Abstract;
 using CI.interview.pltosman.Core.Entities.Concrete;
 using CI.interview.pltosman.Core.Utilities.Results;
 using CI.interview.pltosman.Core.Utilities.Security;
+using CI.interview.pltosman.Entities.Concrete;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
@@ -26,15 +28,28 @@ namespace CI.interview.pltosman.Business.Concrete
             _restClient = new RestClient(_settings.CustomerSettings.ApiBaseUrl);
         }
 
-        public async Task<IDataResult<FixerDetailResponse>> GetFixerDetail(string sdate, string edate, string rateTypes= null)
+        public async Task<IDataResult<List<Rate>>> GetFixerDetail(string sdate, string edate, string rateTypes= null)
         {
 
-            var fixerDetailResponse = new DataResult<FixerDetailResponse>(null, false);
-
+           // var fixerDetailResponse = new DataResult<FixerDetailResponse>(null, false);
+            var ratesResponse = new DataResult<List<Rate>>(null,false);
+            var rateData = new List<Rate>();
             if (IsRateTypesCorrectFormat(rateTypes))
             {
                 try
                 {
+
+                    for (int i = 0; i < 31; i++)
+                    {
+                        var rates = GetFixerRateByDateAsync(new DateTime(2019,10,1).AddDays(i).ToString("yyyy-MM-dd")).Result;
+
+                        var rateResponse =  Rate.FillList(rates);
+                        rateData.AddRange(rateResponse);
+                    }
+
+                    ratesResponse = new DataResult<List<Rate>>(rateData, true);
+               
+                    /*
                     var url = _settings.CustomerSettings.ApiBaseUrl;
 
                     var client = new RestClient(url);
@@ -60,6 +75,7 @@ namespace CI.interview.pltosman.Business.Concrete
                         var data = JsonConvert.DeserializeObject<FixerDetailResponse>(json);
                         fixerDetailResponse = new DataResult<FixerDetailResponse>(data, true);
                     }
+                    */
                 }
                 catch (Exception ex)
                 {
@@ -68,11 +84,11 @@ namespace CI.interview.pltosman.Business.Concrete
             }
             else
             {
-                fixerDetailResponse= new DataResult<FixerDetailResponse>(null, true, "Rate Types couldn't correct format. Example: \"USD,AUD,CAD,PLN,MXN\" ");
+                ratesResponse= new DataResult<List<Rate>>(null, true, "Rate Types couldn't correct format. Example: \"USD,AUD,CAD,PLN,MXN\" ");
             }
 
             
-            return fixerDetailResponse;
+            return ratesResponse;
         }
 
         private bool IsRateTypesCorrectFormat(string rateTypes)

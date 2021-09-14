@@ -8,7 +8,7 @@ namespace CI.interview.pltosman.DataAccess.Concrete.EntityFramework.Contexts
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseInMemoryDatabase(databaseName: "CI_interview");     
+            optionsBuilder.UseInMemoryDatabase(databaseName:"CI_interview");     
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -16,16 +16,15 @@ namespace CI.interview.pltosman.DataAccess.Concrete.EntityFramework.Contexts
 
             base.OnModelCreating(modelBuilder);
           
-            modelBuilder.Entity<FixerRate>(x => x.HasKey(ua => new { ua.Id }));
-            modelBuilder.Entity<Rate>().HasOne(u => u.FixerRate).WithMany(a => a.Rates).HasForeignKey(u => u.FixerRateId);
+            modelBuilder.Entity<Rate>(x => x.HasKey(ua => new { ua.Base,ua.Date,ua.Symbol }));
+        
             modelBuilder.Entity<ExcelData>(x => x.HasKey(ua => new { ua.Id }));
             modelBuilder.Entity<Merge>(x => x.HasKey(ua => new { ua.Id }));
 
         }
 
 
-        public DbSet<Rate> Rates { get; set; }
-        public DbSet<FixerRate> FixerRates { get; set; }
+        public DbSet<Rate> Rates { get; set; }  
         public DbSet<ExcelData> ExcelData { get; set; }
         public DbSet<Merge> Merges { get; set; }
     }

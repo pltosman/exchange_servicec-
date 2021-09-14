@@ -26,12 +26,11 @@ namespace CI.interview.pltosman.Business.Concrete
         }
 
 
-        public void SaveFixerResult(FixerDetailResponse data)
+        public void SaveFixerResult(List<Rate> data)
         {
             try
             {
-                var model = _mapper.Map<FixerRate>(data);
-                _fixerRateDal.Add(model);
+                _fixerRateDal.SaveAllAsync(data);
             }
 
             catch (Exception ex)
@@ -41,7 +40,7 @@ namespace CI.interview.pltosman.Business.Concrete
         }
 
 
-        public List<FixerRate> GetList()
+        public List<Rate> GetList()
         {
             return _fixerRateDal.GetList().ToList();
         }

@@ -25,7 +25,7 @@ namespace CI.interview.pltosman.Business.Concrete
         }
 
 
-        public void Merge(List<ExcelData> data, List<FixerRate> rates)
+        public void Merge(List<ExcelData> data, List<Rate> rates)
         {
 
 

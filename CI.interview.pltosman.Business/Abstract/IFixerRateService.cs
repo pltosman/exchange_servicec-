@@ -8,7 +8,7 @@ namespace CI.interview.pltosman.Business.Abstract
 {
     public interface IFixerRateService
     {
-        void SaveFixerResult(FixerDetailResponse data);
-        List<FixerRate> GetList();
+        void SaveFixerResult(List<Rate> data);
+        List<Rate> GetList();
     }
 }

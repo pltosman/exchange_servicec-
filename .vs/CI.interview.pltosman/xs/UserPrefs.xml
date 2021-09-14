@@ -1,9 +1,12 @@
 ﻿<Properties StartupConfiguration="{B3E0C05F-AC18-4DF0-9C48-F383B6910E26}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CI.interview.pltosman.Business/Concrete/MergeManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CI.interview.pltosman.Entities/Concrete/Merge.cs">
     <Files>
-      <File FileName="CI.interview.pltosman.api/Controllers/HomeController.cs" Line="118" Column="32" />
-      <File FileName="CI.interview.pltosman.Business/Abstract/IMergeService.cs" Line="11" Column="2" />
-      <File FileName="CI.interview.pltosman.Business/Concrete/IMergeManager.cs" Line="10" Column="35" />
+      <File FileName="CI.interview.pltosman.api/Controllers/HomeController.cs" Line="133" Column="10" />
+      <File FileName="CI.interview.pltosman.Core/DataAccesss/EntityFramework/EfEntityRepositoryBase.cs" Line="89" Column="1" />
+      <File FileName="CI.interview.pltosman.Business/Concrete/ExcelService.cs" Line="205" Column="1" />
+      <File FileName="CI.interview.pltosman.Business/Concrete/ExcelDataManager.cs" Line="48" Column="94" />
+      <File FileName="CI.interview.pltosman.DataAccess/Concrete/EntityFramework/Contexts/InterviewContext.cs" Line="12" Column="10" />
+      <File FileName="CI.interview.pltosman.Entities/Concrete/Merge.cs" Line="10" Column="37" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,23 +16,11 @@
               <Node name="Controllers" expanded="True" />
             </Node>
             <Node name="CI.interview.pltosman.Business" expanded="True">
-              <Node name="Abstract" expanded="True" />
-              <Node name="Concrete" expanded="True">
-                <Node name="MergeManager.cs" selected="True" />
-              </Node>
-              <Node name="DependecyResolvers" expanded="True">
-                <Node name="Autofac" expanded="True" />
-              </Node>
+              <Node name="Concrete" expanded="True" />
             </Node>
             <Node name="CI.interview.pltosman.Core" expanded="True">
               <Node name="DataAccesss" expanded="True">
                 <Node name="EntityFramework" expanded="True" />
-              </Node>
-              <Node name="Entities" expanded="True">
-                <Node name="Concrete" expanded="True" />
-              </Node>
-              <Node name="Utilities" expanded="True">
-                <Node name="Results" expanded="True" />
               </Node>
             </Node>
             <Node name="CI.interview.pltosman.DataAccess" expanded="True">
@@ -41,11 +32,27 @@
               </Node>
             </Node>
             <Node name="CI.interview.pltosman.Entities" expanded="True">
-              <Node name="Concrete" expanded="True" />
+              <Node name="Concrete" expanded="True">
+                <Node name="Merge.cs" selected="True" />
+              </Node>
               <Node name="Dtos" expanded="True" />
-              <Node name="ResponseModel" expanded="True" />
             </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>result.Data</Value>
+          <Value>result[12]</Value>
+          <Value>csvTable.Rows[1]</Value>
+          <Value>data.FirstOrDefault()</Value>
+          <Value>model[1]</Value>
+          <Value>query.ToListAsync()</Value>
+          <Value> _excelDataService.GetByDate(new DateTime(2019, 9, 9));</Value>
+          <Value>excelData.FirstOrDefault()</Value>
+          <Value>rates.FirstOrDefault()</Value>
+          <Value>result.Data.FirstOrDefault()</Value>
+          <Value>excelData.FirstOrDefault()</Value>
         </State>
       </Pad>
     </Pads>
@@ -55,12 +62,14 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Business/Concrete/FixerRateManager.cs" relfile="CI.interview.pltosman.Business/Concrete/FixerRateManager.cs" line="33" column="1" />
       <Breakpoint file="/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Business/Concrete/ExcelService.cs" relfile="CI.interview.pltosman.Business/Concrete/ExcelService.cs" line="146" column="1" />
-      <Breakpoint file="/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Business/Concrete/ExcelDataManager.cs" relfile="CI.interview.pltosman.Business/Concrete/ExcelDataManager.cs" line="36" column="1" />
-      <Breakpoint file="/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Business/Concrete/ExcelService.cs" relfile="CI.interview.pltosman.Business/Concrete/ExcelService.cs" line="205" column="1" />
-      <Breakpoint file="/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Core/DataAccesss/EntityFramework/EfEntityRepositoryBase.cs" relfile="CI.interview.pltosman.Core/DataAccesss/EntityFramework/EfEntityRepositoryBase.cs" line="89" column="1" />
       <Breakpoint file="/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api/Controllers/HomeController.cs" relfile="CI.interview.pltosman.api/Controllers/HomeController.cs" line="118" column="1" />
+      <Breakpoint file="/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.DataAccess/Concrete/EntityFramework/Seed.cs" relfile="CI.interview.pltosman.DataAccess/Concrete/EntityFramework/Seed.cs" line="48" column="1" />
+      <Breakpoint file="/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api/Program.cs" relfile="CI.interview.pltosman.api/Program.cs" line="51" column="1" />
+      <Breakpoint file="/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.DataAccess/Concrete/EntityFramework/Seed.cs" relfile="CI.interview.pltosman.DataAccess/Concrete/EntityFramework/Seed.cs" line="14" column="1" />
+      <Breakpoint file="/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.Business/Concrete/FixerDetailService.cs" relfile="CI.interview.pltosman.Business/Concrete/FixerDetailService.cs" line="80" column="1" />
+      <Breakpoint file="/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api/Controllers/HomeController.cs" relfile="CI.interview.pltosman.api/Controllers/HomeController.cs" line="97" column="1" />
+      <Breakpoint file="/Users/osmanpolat/Projects/Interviews/CapitalIndex/CI.interview.pltosman/CI.interview.pltosman.api/Controllers/HomeController.cs" relfile="CI.interview.pltosman.api/Controllers/HomeController.cs" line="100" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

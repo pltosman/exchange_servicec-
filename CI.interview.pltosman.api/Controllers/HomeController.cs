@@ -28,23 +28,24 @@ namespace CI.interview.pltosman.api.Controllers
         private readonly IExcelService _excelService;
         private readonly ILogger<HomeController> _logger;
         private readonly IExcelDataService _excelDataService;
-
+        private readonly IMergeService _mergeService;
         private readonly IMapper _mapper;
 
-        public HomeController(IFixerDetailService fixerDetailService, ILogger<HomeController> logger, IFixerRateService fixerRateService, IExcelService excelService, IExcelDataService excelDataService, IMapper mapper)
+        public HomeController(IFixerDetailService fixerDetailService, ILogger<HomeController> logger, IFixerRateService fixerRateService, IExcelService excelService, IExcelDataService excelDataService,IMergeService mergeService, IMapper mapper)
         {
             _fixerDetailService = fixerDetailService;
             _fixerRateService = fixerRateService;
             _excelService = excelService;
             _logger = logger;
             _excelDataService = excelDataService;
+            _mergeService = mergeService;
             _mapper = mapper;
         }
 
 
         [HttpPost()]
         [Produces("application/json")]
-        [ProducesResponseType(typeof(FixerDetailResponse), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(IDataResult<Rate>), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
 
@@ -63,7 +64,7 @@ namespace CI.interview.pltosman.api.Controllers
             if (result.Success)
             {
                 _fixerRateService.SaveFixerResult(result.Data);
-                return Ok(result.Data);
+                return Ok(new DataResult<Rate>(result.Data.FirstOrDefault(),true, $"count: {result.Data.Count.ToString() }" ));
             }
 
             if (result.Message.Contains("NotFound"))
@@ -75,7 +76,7 @@ namespace CI.interview.pltosman.api.Controllers
         }
 
 
-        [HttpPost("task2")]
+        [HttpPost("readExcels")]
         [Produces("application/json")]
         [ProducesResponseType(typeof(IDataResult<List<DataExcelModelDto>>), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
@@ -91,16 +92,16 @@ namespace CI.interview.pltosman.api.Controllers
 
             }
 
-            var response = _excelDataService.GetByDate(new DateTime(2019, 10, 1)).Result;
+            var alldata = _excelDataService.GetList();
+
+            var response = _excelDataService.GetByDate(new DateTime(2019, 09, 1)).Result;
 
 
             var rDto = _mapper.Map<List<DataExcelModelDto>>(response);
 
             return Ok(new DataResult<List<DataExcelModelDto>>(rDto, true));
-            // return NotFound(new Result(false, AspectMessages.NotFoundResult));
 
         }
-
 
         [HttpPost("mergeDataWithRates")]
         [Produces("application/json")]
@@ -114,10 +115,7 @@ namespace CI.interview.pltosman.api.Controllers
 
             var rates =  _fixerRateService.GetList();
 
-
             _mergeService.Merge(excelData, rates);
-
-         
 
             return Ok(new DataResult<List<DataExcelModelDto>>(null, true));
             // return NotFound(new Result(false, AspectMessages.NotFoundResult));

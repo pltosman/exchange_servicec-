@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using CI.interview.pltosman.Core.Entities;
 
 namespace CI.interview.pltosman.Entities.Concrete
@@ -8,15 +9,26 @@ namespace CI.interview.pltosman.Entities.Concrete
         //TODO
         public Guid Id { get; set; }
 
-        public string Timestamp { get; set; }
-
-        public bool Success { get; set; }
-
         public DateTime Date { get; set; }
 
-        public string Quote { get; set; }
-
         public string Base { get; set; }
+
+        public string Country { get; set; }
+
+        [NotMapped]
+        public decimal amount_eur {
+
+            get
+            {
+                //TODO:
+                return Amount / Amount;
+            }
+        }
+
+        public string Currency { get; set; }
+
+        public decimal Amount { get; set; }
+
 
     }
 }

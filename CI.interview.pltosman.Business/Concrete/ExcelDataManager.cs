@@ -45,7 +45,7 @@ namespace CI.interview.pltosman.Business.Concrete
 
         public async Task<List<ExcelData>> GetByDate(DateTime date)
         {
-            return ((List<ExcelData>)await _excelData.GetAllAsync(x => x.Date.Equals(date))).GetRange(1,4);
+            return ((List<ExcelData>)await _excelData.GetAllAsync(x => x.Date.Equals(date)));
         }
 
         public List<ExcelData> GetList()

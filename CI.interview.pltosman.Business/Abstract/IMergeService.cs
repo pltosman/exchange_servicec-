@@ -6,6 +6,6 @@ namespace CI.interview.pltosman.Business.Abstract
 {
     public interface IMergeService
     {
-        void Merge(List<ExcelData> data, List<FixerRate> rates);
+        void Merge(List<ExcelData> data, List<Rate> rates);
     }
 }
